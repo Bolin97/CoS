@@ -6,7 +6,7 @@
   
 2. customized these params in train_cl.py
 
-```json
+```python
 args_dict = {
         "output_dir": './task-6-tripletN-use_ce-pairwise-ep30',  
         "num_train_epochs": 30,   
