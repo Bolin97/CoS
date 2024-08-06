@@ -6,7 +6,6 @@
   
 2. customized these params in train_cl.py
 
-```markdown
 ```json
 args_dict = {
         "output_dir": './task-6-tripletN-use_ce-pairwise-ep30',  
@@ -37,4 +36,5 @@ args_dict = {
         'tripletN': False,
         'in_region': False
     }
+
 3. nohup python train_cl.py > {name}.log 2>&1 &
