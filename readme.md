@@ -36,5 +36,6 @@ args_dict = {
         'tripletN': False,
         'in_region': False
     }
+```
 
 3. nohup python train_cl.py > {name}.log 2>&1 &
