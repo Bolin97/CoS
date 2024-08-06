@@ -1,11 +1,13 @@
-Data and Codes for CoS.
+## Data and Codes for CoS.
 
-three steps for train a scorer:
+### Three steps for train a scorer:
 
 1. cd ./scorer/
   
 2. customized these params in train_cl.py
 
+```markdown
+```json
 args_dict = {
         "output_dir": './task-6-tripletN-use_ce-pairwise-ep30',  
         "num_train_epochs": 30,   
@@ -22,9 +24,8 @@ args_dict = {
         "fp16": True, 
         "fp16_opt_level": 'O1',
         "ddp_find_unused_parameters": False,
-        # "load_best_model_at_end": True, # 早停机制必设参数
-        # "loss_type": 'triplet|contrastive', # loss计算方法
-        "loss_type": "contrastive", # 对比学习策略
+        # "load_best_model_at_end": True, # 早停机制
+        "loss_type": "contrastive", # 对比学习策略, triplet:三元组损失, contrastive随机二元对比
         "dis_type": "pairwise", # 距离计算方法
         "T_margin": 3.0,
         "C_margin": 0.0,
@@ -36,4 +37,4 @@ args_dict = {
         'tripletN': False,
         'in_region': False
     }
-3. 
+3. nohup python train_cl.py > {name}.log 2>&1 &
