@@ -1,14 +1,37 @@
 ## Data and Codes for CoS.
 
+## Data Access
+
 You can download our dataset through 
 
 https://drive.google.com/drive/folders/1e94bfQ9D_7h4SvZ4RpuVN7Cg7i5tOHoY?usp=sharing
 
-### Three steps for train a scorer:
+## Environment Setup
 
-1. cd ./scorer/
-  
-2. customized these params in train_cl.py
+```bash
+conda create --n cos python==3.7
+```
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+conda activate cos
+```
+
+## Run the Program
+
+Three steps for training the scorer:
+
+1-step
+
+```bash
+cd ./scorer/
+```
+
+2-step
+
+customized these params in train_cl.py
 
 ```python
 args_dict = {
@@ -41,5 +64,9 @@ args_dict = {
         'in_region': False
     }
 ```
+3-step
 
-3. nohup python train_cl.py > {name}.log 2>&1 &
+```bash
+nohup python train_cl.py > {name}.log 2>&1 &
+```
+
