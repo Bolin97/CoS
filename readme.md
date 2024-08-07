@@ -1,5 +1,9 @@
 ## Data and Codes for CoS.
 
+You can download our dataset through 
+
+https://drive.google.com/drive/folders/1e94bfQ9D_7h4SvZ4RpuVN7Cg7i5tOHoY?usp=sharing
+
 ### Three steps for train a scorer:
 
 1. cd ./scorer/
